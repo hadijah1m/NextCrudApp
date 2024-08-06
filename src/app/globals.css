@@ -1,33 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body {
+}
+.imgContainer {
+  animation: move 2s ease-out alternate infinite;
+}
+@keyframes move {
+  from {
+    transform: translateY(4ch);
+  }
+  to {
+    transform: translateY(-4ch);
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.img {
+  object-fit: contain;
+}
+.cImgContainer {
+  animation: change 1s ease-in alternate infinite;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes change {
+  from {
+    scale: 0.95;
+  }
+  to {
+    scale: 1;
   }
 }

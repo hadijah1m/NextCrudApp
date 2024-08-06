@@ -1,0 +1,6 @@
+mongoose.model.Post ||..
+useform used use client
+toast and alerts not used in server side component.
+servercomponents are the parents .
+sessionProver is a client component
+make get request to check provider to http://localhost:3000/api/auth/providers
